@@ -3,14 +3,26 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
     font-family: 'DotGothic16', sans-serif;
     --accent-color: rgb(50, 206, 211);
     --text-color: rgb(58, 13, 13);
+    --border-color: rgb(58, 13, 13);
+    scroll-behavior: smooth;
 }
 
+.container {
+    max-width: 980px;
+    margin: auto;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
 
 
 

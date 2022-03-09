@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +9,22 @@
     <link rel="shortcut icon" href="img/baby-yoda.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
     <header class="header">
         <nav class="header__nav">
-            <div class="header__nav-logo">
-                Stickerz
-            </div>
-            <div class="header__nav-menu">
-                <a href="#" class="header__nav-menu-item">Home</a>
-                <a href="#" class="header__nav-menu-item">Products</a>
-                <a href="#" class="header__nav-menu-item">Contacts</a>
-                <a href="cart.html" class="header__nav-menu-item">Cart</a>
+            <div class="container">
+                <div class="header__nav-logo">
+                    Stickerz
+                </div>
+                <label class="burger-icon" for="burger-checkbox">☰</label>
+                <input type="checkbox" id="burger-checkbox">
+                <div class="header__nav-menu">
+                    <a href="#" class="header__nav-menu-item">Home</a>
+                    <a href="#" class="header__nav-menu-item">Products</a>
+                    <a href="#footer" class="header__nav-menu-item">Contacts</a>
+                    <a href="cart.html" class="header__nav-menu-item">Cart</a>
+                </div>
             </div>
         </nav>
         <div class="header__banner">
@@ -27,9 +33,85 @@
         </div>
     </header>
     <main class="main">
-
+        <section class="main-products container">
+            <h2 id="products" class="main-products__h2">Products</h2>
+            <div class="main-products__list">
+                <article class="product-card">
+                    <img class="product-card__image" src="img/baby-yoda.svg" alt="Baby Yoda">
+                    <h3 class="product-card__h3">Baby Yoda</h3>
+                    <p class="product-card__description">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+                        fuga autem possimus eveniet facere, non minus magnam obcaecati,
+                        tenetur recusandae, corporis itaque suscipit. Vero illo nulla
+                        asperiores laudantium tempore porro!
+                    </p>
+                    <div class="product-card__buttons">
+                        <button class="product-card__buttons-info button button-card">
+                            Info
+                        </button>
+                        <button class="product-card__buttons-buy button button-card">
+                            Buy
+                        </button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img class="product-card__image" src="img/banana.svg" alt="Banana">
+                    <h3 class="product-card__h3">Banana</h3>
+                    <p class="product-card__description">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+                        fuga autem possimus eveniet facere, non minus magnam obcaecati,
+                        tenetur recusandae, corporis itaque suscipit. Vero illo nulla
+                        asperiores laudantium tempore porro!
+                    </p>
+                    <div class="product-card__buttons">
+                        <button class="product-card__buttons-info button button-card">
+                            Info
+                        </button>
+                        <button class="product-card__buttons-buy button button-card">
+                            Buy
+                        </button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img class="product-card__image" src="img/girl.svg" alt="Girl">
+                    <h3 class="product-card__h3">Girl</h3>
+                    <p class="product-card__description">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+                        fuga autem possimus eveniet facere, non minus magnam obcaecati,
+                        tenetur recusandae, corporis itaque suscipit. Vero illo nulla
+                        asperiores laudantium tempore porro!
+                    </p>
+                    <div class="product-card__buttons">
+                        <button class="product-card__buttons-info button button-card">
+                            Info
+                        </button>
+                        <button class="product-card__buttons-buy button button-card">
+                            Buy
+                        </button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img class="product-card__image" src="img/viking.svg" alt="Viking">
+                    <h3 class="product-card__h3">Viking</h3>
+                    <p class="product-card__description">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+                        fuga autem possimus eveniet facere, non minus magnam obcaecati,
+                        tenetur recusandae, corporis itaque suscipit. Vero illo nulla
+                        asperiores laudantium tempore porro!
+                    </p>
+                    <div class="product-card__buttons">
+                        <button class="product-card__buttons-info button button-card">
+                            Info
+                        </button>
+                        <button class="product-card__buttons-buy button button-card">
+                            Buy
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
-    <footer class="footer">
+    <footer class="footer container" id="footer">
         <form action="" method="post" class="form">
             <input type="text" placeholder="user name" name="user-name">
             <input type="email" placeholder="user email" name="user-email">
@@ -37,4 +119,5 @@
         </form>
     </footer>
 </body>
+
 </html>
