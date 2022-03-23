@@ -1,0 +1,27 @@
+.products-carousel {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    height: 50vh;
+}
+
+.products-carousel__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-carousel__inner img {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+.products-carousel .visible {
+    background-color: greenyellow;
+}
+
+.products-carousel .indicators {
+    display: flex;
+    justify-content: center;
+}
+
