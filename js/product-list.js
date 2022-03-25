@@ -1,37 +1,17 @@
-(function() {
+(async function() {
 
-    const products = [
-        {
-            id: 1,
-            title: 'Baby Yoda',
-            description: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
-            price: 10.99,
-            image: 'img/baby-yoda.svg'
-        },
-        {
-            id: 2,
-            title: 'Banana',
-            description: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
-            price: 9.99,
-            image: 'img/banana.svg'
-        },
-        {
-            id: 3,
-            title: 'Girl',
-            description: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
-            price: 8.99,
-            image: 'img/girl.svg'
-        },
-        {
-            id: 4,
-            title: 'Viking',
-            description: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
-            price: 8.99,
-            image: 'img/viking.svg'
-        }
-    ];
+    let rate = 1;
+    let products;
 
-    function renderProducts(products) {
+    async function convertCurrency() {
+        const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+        const currencies = await response.json();
+        const currencyName = document.querySelector('.currency').value;
+        rate = currencies.rates[currencyName];
+        renderProducts();
+    }
+
+    function renderProducts() {
         const productsContainer = document.querySelector('.main-products__list');
         productsContainer.innerHTML = '';
         for (const product of products) {
@@ -42,12 +22,32 @@
                 <h5 class="card-title">${product.title}</h5>
                 <p class="card-text">${product.description}</p>
                 <a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#product-info-modal">Info</a>
-                <a href="#" class="btn btn-primary">Buy - ${product.price}</a>
+                <a href="#" class="btn btn-primary">Buy - ${(product.price * rate).toFixed(2)}</a>
                 </div>
             </article>`;
         }
     }
 
-    renderProducts(products);
+    const response = await fetch('products.json');
+    products = await response.json();
+    renderProducts();
+
+    document.querySelector('.convert').addEventListener('click', convertCurrency);
+
+    // Promise 
+    // fetch('products.json')
+    //  .then( response => response.json() ) 
+    //  .then( products => renderProducts(products) );
+
+    // AJAX
+    // const xhr = new XMLHttpRequest();
+    // xhr.onreadystatechange = function() {
+    //     if (xhr.readyState === 4 && xhr.status === 200) {
+    //         const products = JSON.parse(xhr.responseText);
+    //         renderProducts(products);
+    //     }
+    // }
+    // xhr.open('get', 'products.json', true);
+    // xhr.send();
 
 })();

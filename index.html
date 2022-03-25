@@ -45,17 +45,39 @@
     <main class="main">
         <section class="main-products container">
             <h2 id="products" class="main-products__h2">Products</h2>
+            <input type="text" class="currency" value="USD"><button class="convert">Convert</button>
             <div class="main-products__list row">
 
             </div>
         </section>
     </main>
     <footer class="footer container" id="footer">
-        <form action="" method="post" class="form">
-            <input type="text" placeholder="user name" name="user-name">
-            <input type="email" placeholder="user email" name="user-email">
-            <input type="submit">
-        </form>
+      <form class="contact-form-formspree" action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+        <label
+          >Your name:
+          <input type="text" name="user-name" placeholder="User Name" />
+        </label>
+        <label
+          >Your email:
+          <input type="email" name="user-email" placeholder="User Email" />
+        </label>
+        <input type="submit" />
+      </form>
+    <form class="contact-form-nodejs" action="contact" method="POST">
+        <label
+          >Your name:
+          <input type="text" name="user-name" placeholder="User Name" />
+        </label>
+        <label
+          >Your email:
+          <input type="email" name="user-email" placeholder="User Email" />
+        </label>
+        <label>Message:
+          <textarea name="message" cols="30" rows="10"></textarea>
+        </label>
+        <input type="submit" />
+      </form>
+      <div class="contact-form-status"></div>
     </footer>
     <!-- Modal Product Info -->
     <div class="modal fade" id="product-info-modal" tabindex="-1" aria-labelledby="product-info-modalLabel" aria-hidden="true">
@@ -84,6 +106,8 @@
     <script src="js/countdown.js"></script>
     <script src="js/product-list.js"></script>
     <script src="js/products-carousel.js"></script>
+    <script src="js/contact-form-formspree.js"></script>
+    <script src="js/contact-form-nodejs.js"></script>
 </body>
 
 </html>

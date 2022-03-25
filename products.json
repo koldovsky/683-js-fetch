@@ -1,0 +1,30 @@
+[
+ {
+    "id":1,
+    "title":"Baby Yoda",
+    "description":"Some quick example text to build on the card title and make up the bulk of the cards content.",
+    "price":10.99,
+    "image":"img/baby-yoda.svg"
+ },
+ {
+    "id":2,
+    "title":"Banana",
+    "description":"Some quick example text to build on the card title and make up the bulk of the cards content.",
+    "price":9.99,
+    "image":"img/banana.svg"
+ },
+ {
+    "id":3,
+    "title":"Girl",
+    "description":"Some quick example text to build on the card title and make up the bulk of the cards content.",
+    "price":8.99,
+    "image":"img/girl.svg"
+ },
+ {
+    "id":4,
+    "title":"Viking",
+    "description":"Some quick example text to build on the card title and make up the bulk of the cards content.",
+    "price":8.99,
+    "image":"img/viking.svg"
+ }
+]
